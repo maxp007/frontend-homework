@@ -53,4 +53,21 @@ QUnit.module('Тестируем функцию tree', function () {
 		assert.strictEqual(tree(8), expected);
 		assert.strictEqual(tree('8'), expected);
 	});
+	
+	QUnit.test('Проверка введенных значений', function (assert) {
+		const expected = null;
+			
+		assert.strictEqual(tree(null), expected);
+		assert.strictEqual(tree(undefined), expected);
+		assert.strictEqual(tree(NaN), expected);
+		assert.strictEqual(tree(' '), expected);
+		assert.strictEqual(tree(''), expected);
+		assert.strictEqual(tree('a1'), expected);
+		assert.strictEqual(tree('62.4'), expected);
+		assert.strictEqual(tree('43f'), expected);
+		assert.strictEqual(tree([1,2]), expected);
+		assert.strictEqual(tree({}), expected);
+		
+	});
+	
 });
