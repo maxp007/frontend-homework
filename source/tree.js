@@ -1,18 +1,11 @@
 'use strict';
 
-const isInt = (a) => {
-	if (a !== a || a != parseInt(a, 10)) {
-
-		return false;
-	}
-	return true;
-}
+const isInt = (a) => (a === a && a == parseInt(a, 10))
 
 const tree = (N) => {
 	if (!isInt(N) || N < 3) {
 		return null;
 	}
-
 	let res = '';
 	let spaces = '';
 
